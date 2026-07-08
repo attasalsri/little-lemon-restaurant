@@ -1,0 +1,184 @@
+/* ==========================================================================
+   1. تنسيق قسم الـ Hero (الواجهة الترحيبية بالكرت الأبيض) - للشاشات الكبيرة
+   ========================================================================== */
+.hero-section {
+  background-image: url('https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=1200&auto=format&fit=crop'); 
+  background-size: cover;
+  background-position: center;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.hero-overlay {
+  background-color: rgba(0, 0, 0, 0.4); /* طبقة تعتيم الخلفية لإبراز الكرت */
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* البطاقة البيضاء الأنيقة من تصميمك في فيقما */
+.hero-card {
+  background-color: #FFFFFF;
+  padding: 40px;
+  border-radius: 16px;
+  text-align: center;
+  max-width: 550px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(73, 94, 87, 0.1);
+}
+
+.hero-logo-icon {
+  font-size: 2.5rem;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.hero-title {
+  color: #495E57; /* الأخضر الأساسي للمطعم */
+  font-size: 2.5rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  margin: 0 0 15px 0;
+  font-family: 'Markazi Text', serif;
+}
+
+.hero-description {
+  color: #333333;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  font-style: italic;
+  margin: 0;
+}
+
+/* ==========================================================================
+   2. تنسيق زر وعنوان الأطباق المميزة (Signature Dishes)
+   ========================================================================== */
+.dishes-section {
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 0 20px;
+}
+
+.dishes-header-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.signature-btn {
+  background-color: #495E57; /* الأخضر الداكن للزر */
+  color: #FFFFFF;
+  border: none;
+  padding: 14px 36px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: background-color 0.2s ease;
+}
+
+.signature-btn:hover {
+  background-color: #374741;
+}
+
+/* ==========================================================================
+   3. تنسيق شبكة البطاقات الثلاثة (Dishes Grid) - للابتوب (Desktop)
+   ========================================================================== */
+.dishes-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 أعمدة متساوية بجانب بعضها */
+  gap: 30px;
+}
+
+/* تصميم كرت الطبق المقتبس من الفيقما الخاص بك */
+.dish-card {
+  background-color: #EDEFEE; /* الخلفية الرمادية الفاتحة للأطباق */
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease;
+}
+
+.dish-card:hover {
+  transform: translateY(-5px);
+}
+
+.dish-image-wrapper {
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+  padding: 15px 15px 0 15px; /* يترك إطار حول الصورة لتبدو داخل فريم */
+}
+
+.dish-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.dish-info {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.dish-title {
+  color: #495E57;
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.dish-text {
+  color: #4b5563;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ==========================================================================
+   4. التجاوب الكامل مع شاشات الجوال (Media Query)
+   ========================================================================== */
+@media (max-width: 768px) {
+  /* تعديل الـ Hero ليناسب الجوال */
+  .hero-section {
+    height: auto;
+    background-image: none; /* إلغاء الصورة الكبيرة في الجوال للتركيز على المحتوى */
+    background-color: #F4F4F4;
+    padding: 40px 0;
+  }
+
+  .hero-overlay {
+    background: none;
+    padding: 0 20px;
+  }
+
+  .hero-card {
+    box-shadow: none;
+    border: none;
+    background-color: transparent;
+    padding: 0;
+  }
+
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  /* تعديل البطاقات لتصبح عمودية فوق بعضها في الجوال */
+  .dishes-grid {
+    grid-template-columns: 1fr; /* عمود واحد فقط للبطاقات */
+    gap: 25px;
+    padding: 0 10px;
+  }
+}

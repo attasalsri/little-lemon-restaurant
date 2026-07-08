@@ -1,0 +1,49 @@
+.payment-page {
+  padding: 50px 20px;
+  max-width: 450px;
+  margin: 50px auto;
+  background-color: #EDEFEE; /* لون الخلفية الفاتح */
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.payment-page h1 {
+  color: #495E57; /* اللون الأخضر الأساسي للمطعم */
+  margin-bottom: 25px;
+}
+
+.payment-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  text-align: left;
+}
+
+.payment-form label {
+  font-weight: bold;
+  color: #333;
+}
+
+.payment-form input {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.payment-form button {
+  background-color: #495E57;
+  color: white;
+  padding: 15px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s;
+}
+
+.payment-form button:hover {
+  background-color: #3e514a;
+}

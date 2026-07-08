@@ -1,0 +1,46 @@
+.menu-container {
+  background-color: #495E57; /* لون الخلفية الداكن */
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.menu-card {
+  background-color: #EDEFEE; /* لون البطاقة الفاتح */
+  border-radius: 15px;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.menu-card img {
+  width: 150px;
+  height: 100px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.menu-details {
+  flex: 1;
+}
+
+.menu-details h3 {
+  margin: 0 0 5px 0;
+  font-size: 1.1rem;
+}
+
+.menu-details p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.menu-price {
+  background-color: #495E57;
+  color: white;
+  padding: 15px 25px;
+  border-radius: 10px;
+  font-weight: bold;
+}
